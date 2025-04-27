@@ -1,6 +1,7 @@
+// import { Button } from "@/components/ui/button";
+import { navLinks } from "@/constant/constant";
 import Image from "next/image";
 import Link from "next/link";
-
 const Nav = () => {
   return (
     <div className={`w-full fixed h-[12vh] z-[10] bg-blue-950`}>
@@ -13,8 +14,17 @@ const Nav = () => {
           className="ml-[1.5rem] sm:ml-0"
           src="/images/logo.png"
         />
-        {/* Nav Links */}
-        <div className="flex items-center space-x-10"></div>
+        {/* Nav Links `*/}
+        <div className="flex items-center space-x-10">
+          <div className="hidden lg:flex items-center space-x-8">
+            {navLinks.map((nav) => (
+              <Link key={nav.id} href={nav.url}>
+                <p className="navlink">{nav.label}</p>
+              </Link>
+            ))}
+          </div>
+          {/* Button */}
+        </div>
       </div>
     </div>
   );
