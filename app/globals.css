@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@plugin "daisyui" {
+  themes: light --default, synthwave --prefersdark;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @layer components {
@@ -15,6 +19,9 @@
     &:hover::after {
       @apply scale-x-100 origin-left;
     }
+  }
+  .responsive-btn {
+    @apply btn-xs sm:btn-sm btn lg:btn-lg xl:btn-xl;
   }
 }
 
