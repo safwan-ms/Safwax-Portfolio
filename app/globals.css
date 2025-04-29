@@ -1,8 +1,17 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @plugin "daisyui" {
-  themes: garden --default, synthwave --prefersdark;
+  themes: valentine --default, synthwave --prefersdark;
+}
+/* styles/globals.css or your main CSS file */
+[data-theme="synthwave"] .dynamic-text {
+  color: white;
+}
+
+[data-theme="valentine"] .dynamic-text {
+  color: black;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -13,7 +22,7 @@
 
     &::after {
       content: "";
-      @apply absolute bottom-0 left-0 h-[3px] bg-yellow-400 w-full scale-x-0 transition duration-300 origin-right;
+      @apply absolute bottom-0 left-0 h-[3px] bg-warning w-full scale-x-0 transition duration-300 origin-right;
     }
 
     &:hover::after {

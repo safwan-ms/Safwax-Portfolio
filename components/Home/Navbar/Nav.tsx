@@ -2,40 +2,48 @@ import { navLinks } from "@/constant/constant";
 import Image from "next/image";
 import Link from "next/link";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import ThemeController from "./ThemeController";
+import { Poppins } from "next/font/google";
+
+const poppinsFont = Poppins({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const Nav = () => {
   return (
     <div
-      className={`fixed bg-base-100 top-0 left-0 w-full h-[12vh] bg-opacity-50 backdrop-blur-lg shadow-lg z-10`}
+      className={`fixed px-5 top-0 left-0 w-full h-[12vh] bg-opacity-70 backdrop-blur-md shadow-md z-10`}
     >
-      <div className="flex items-center h-full justify-between w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">
+      <div className="flex items-center  justify-between w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">
         {/* LOGO */}
-        <Image
-          alt="LOGO"
-          width={170}
-          height={170}
-          className="ml-[0rem] lg:ml-[1.5rem] sm:ml-0"
-          src="/images/logo.png"
-        />
+        <div className="overflow-y-hidden">
+          <h1 className={`${poppinsFont.className} dynamic-text text-2xl`}>
+            Safwax
+            <span className="text-5xl bg-gradient-to-tl  from-[#f72585]  to-[#7209b7] text-transparent  bg-clip-text">
+              .
+            </span>
+          </h1>
+        </div>
         {/* Nav Links `*/}
-        <div className="flex items-center space-x-10">
+        <div className="flex mt-4 items-center space-x-10">
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((nav) => (
               <Link key={nav.id} href={nav.url}>
-                <p className="navlink">{nav.label}</p>
+                <p className="navlink text-base-content">{nav.label}</p>
               </Link>
             ))}
           </div>
         </div>
         {/* Button */}
-        <div className="flex items-center space-x-1">
-          <button className=" px-3 py-3 text-blue-800 font-semibold sm:text-base text-sm bg-white border-none responsive-btn hover:bg-gray-200 transition-all duration-200 rounded-lg">
-            Hire me
-          </button>
+        <div className="flex mt-4 items-center space-x-6">
+          <div className="text-base-content ">
+            <ThemeController />
+          </div>
 
           {/* Burger */}
           <label htmlFor="my-drawer" className="drawer-button">
-            <HiBars3BottomRight className="w-8 h-8 cursor-pointer text-white lg:hidden" />
+            <HiBars3BottomRight className="w-8 h-8 cursor-pointer text-base-content lg:hidden" />
           </label>
         </div>
       </div>

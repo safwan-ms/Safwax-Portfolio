@@ -5,12 +5,12 @@ import { FaDownload } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="w-full min-h-screen flex items-center overflow-hidden  bg-base-100">
+    <div className="w-full pb-16 pt-16 min-h-screen flex items-center overflow-hidden  bg-base-100">
       <div className="flex justify-center flex-col w-4/5 h-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           {/* Text Content */}
           <div>
-            <div className="mx-auto mt-20  sm:mt-20 md:mt-20 mb-5 lg:mb-0 bg-cover lg:hidden rounded-[3rem] border-[3.5px] border-info-content overflow-hidden w-[250px] h-[250px] md:w-[350px] md:h-[350px] bg-black">
+            <div className="mx-auto mt-5 mb-5 lg:mb-0 bg-cover lg:hidden rounded-full border-[3.5px] border-info-content overflow-hidden w-[200px] h-[200px] md:w-[350px] md:h-[350px] bg-black">
               <Image
                 src={BaseInfo.profilePic}
                 alt={BaseInfo.name}
@@ -19,11 +19,11 @@ const Hero = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl mb-5 text-gray-300 font-semibold">
+            <h1 className="text-2xl text-base-content md:text-3xl lg:text-4xl mb-5 font-semibold">
               I am {BaseInfo.name}
             </h1>
             {/* Title  */}
-            <h1 className="text-bg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-white">
+            <h1 className="bg-gradient-to-r from-[#f72585]  to-[#7209b7] bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] ">
               {BaseInfo.position}
             </h1>
             {/* Description */}
@@ -31,13 +31,18 @@ const Hero = () => {
               {BaseInfo.description}
             </p>
             {/* Button */}
-            <button className="btn btn-secondary mt-5">
-              <span>Download CV</span>
-              <FaDownload />
-            </button>
+            <div className="flex space-x-5">
+              <button className="btn responsive-btn btn-secondary mt-5">
+                <span>Download CV</span>
+                <FaDownload />
+              </button>
+              <button className="btn  responsive-btn btn-base-content mt-5">
+                <span>Hire Me</span>
+              </button>
+            </div>
           </div>
           {/* Image content */}
-          <div className="mx-auto bg-cover hidden lg:block rounded-[3rem] border-[3.5px] border-info-content overflow-hidden w-[450px] h-[450px] bg-black">
+          <div className="mx-auto bg-cover hidden lg:block rounded-[3rem] border-[5px] border-info-content overflow-hidden w-[450px] h-[450px] bg-black">
             <Image
               src={BaseInfo.profilePic}
               alt={BaseInfo.name}

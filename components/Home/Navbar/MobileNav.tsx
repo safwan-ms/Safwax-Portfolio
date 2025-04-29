@@ -17,7 +17,7 @@ const MobileNav = () => {
           {/* Sidebar content here */}
           {navLinks.map((nav) => (
             <li key={nav.id}>
-              <Link className="navlink w-full" href={nav.url}>
+              <Link className="navlink w-full text-base-content" href={nav.url}>
                 {nav.label}
               </Link>
             </li>
