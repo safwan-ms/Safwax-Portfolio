@@ -1,4 +1,5 @@
 import About from "../About/About";
+import Services from "../Services/Services";
 import Hero from "./Hero/Hero";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div className="overflow-hidden">
       <Hero />
       <About />
+      <Services />
     </div>
   );
 };
