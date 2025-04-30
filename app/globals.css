@@ -5,7 +5,7 @@
 @plugin "daisyui" {
   themes: valentine --default, synthwave --prefersdark;
 }
-/* styles/globals.css or your main CSS file */
+
 [data-theme="synthwave"] .dynamic-text {
   color: white;
 }
@@ -33,11 +33,11 @@
     @apply btn-xs sm:btn-sm btn lg:btn-lg xl:btn-xl;
   }
   .text-bg {
-    background-image: linear-gradient(to right, #8750f7, #fff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @apply bg-gradient-to-tl  from-[#f72585]  to-[#7209b7] text-transparent  bg-clip-text;
   }
+}
+html {
+  scroll-behavior: smooth;
 }
 
 @theme inline {

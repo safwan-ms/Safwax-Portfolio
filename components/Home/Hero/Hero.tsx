@@ -5,7 +5,7 @@ import { FaDownload } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="w-full pb-16 pt-16 min-h-screen flex items-center overflow-hidden  bg-base-100">
+    <div className="w-full pb-12 md:pb-14 lg:pb-16 pt-16 min-h-screen flex items-center overflow-hidden  bg-base-100">
       <div className="flex justify-center flex-col w-4/5 h-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           {/* Text Content */}
@@ -27,16 +27,16 @@ const Hero = () => {
               {BaseInfo.position}
             </h1>
             {/* Description */}
-            <p className="mt-6 text-sm md:text-base text-gray-400 text-opacity-50">
+            <p className="mt-6 text-sm md:text-base text-base-content text-opacity-50">
               {BaseInfo.description}
             </p>
             {/* Button */}
-            <div className="flex space-x-5">
-              <button className="btn responsive-btn btn-secondary mt-5">
+            <div className="flex space-x-4">
+              <button className="btn responsive-btn px-2 text-sm btn-secondary mt-5">
                 <span>Download CV</span>
                 <FaDownload />
               </button>
-              <button className="btn  responsive-btn btn-base-content mt-5">
+              <button className="btn btn-primary px-2 text-sm responsive-btn mt-5">
                 <span>Hire Me</span>
               </button>
             </div>
