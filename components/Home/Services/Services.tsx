@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "../Helper/SectionHeading";
+import SectionHeading from "../../Helper/SectionHeading";
 import { servicesData } from "@/Data/data";
 import ServiceCard from "./ServiceCard";
 

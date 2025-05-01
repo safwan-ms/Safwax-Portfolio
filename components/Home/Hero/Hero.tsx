@@ -1,7 +1,9 @@
+"use client";
 import { BaseInfo } from "@/Data/data";
 import Image from "next/image";
 import React from "react";
 import { FaDownload } from "react-icons/fa";
+import Tilt from "react-parallax-tilt";
 
 const Hero = () => {
   return (
@@ -10,7 +12,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           {/* Text Content */}
           <div>
-            <div className="mx-auto mt-5 mb-5 lg:mb-0 bg-cover lg:hidden rounded-full border-[3.5px] border-info-content overflow-hidden w-[200px] h-[200px] md:w-[350px] md:h-[350px] bg-black">
+            <Tilt className="mx-auto mt-5 mb-5 lg:mb-0 bg-cover lg:hidden rounded-full border-[3.5px] border-info-content overflow-hidden w-[200px] h-[200px] md:w-[350px] md:h-[350px] bg-black">
               <Image
                 src={BaseInfo.profilePic}
                 alt={BaseInfo.name}
@@ -18,7 +20,7 @@ const Hero = () => {
                 height={250}
                 className="w-full h-full object-cover"
               />
-            </div>
+            </Tilt>
             <h1 className="text-2xl text-base-content md:text-3xl lg:text-4xl mb-5 font-semibold">
               I am {BaseInfo.name}
             </h1>

@@ -1,9 +1,9 @@
 import { aboutInfo } from "@/Data/data";
-import SectionHeading from "../Helper/SectionHeading";
 import { FaCheck } from "react-icons/fa";
 import * as motion from "motion/react-client";
 import { Poppins } from "next/font/google";
 import Image from "next/image";
+import SectionHeading from "@/components/Helper/SectionHeading";
 
 const poppinsFont = Poppins({
   subsets: ["latin"],
@@ -12,7 +12,7 @@ const poppinsFont = Poppins({
 const About = () => {
   return (
     <div
-      className="bg-gradient-to-b from-base-100 to-error-content pt-12 md:pt-14 lg:pt-16 pb-16"
+      className="bg-gradient-to-b from-base-100 to-error-content pt-12 md:pt-14 lg:pt-16 pb-12 md:pb-14 lg:pb-16"
       id="about"
     >
       <div
