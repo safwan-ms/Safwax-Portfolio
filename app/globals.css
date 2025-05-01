@@ -30,7 +30,7 @@
     }
   }
   .responsive-btn {
-    @apply btn-xs sm:btn-sm btn lg:btn-lg xl:btn-xl;
+    @apply btn-sm btn lg:btn-lg xl:btn-xl;
   }
   .text-bg {
     @apply bg-gradient-to-tl  from-[#f72585]  to-[#7209b7] text-transparent  bg-clip-text;
