@@ -20,8 +20,31 @@ const About = () => {
       ></div>
       <SectionHeading>About Me</SectionHeading>
       <div className="w-[80%] mx-auto grid grid-cols-1  lg:grid-cols-2 gap-8 items-center mt-20">
+        {/* Image Content */}
+        <div className="grid grid-cols-2 gap-16 items-center lg:mx-auto">
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mx-auto bg-cover hidden lg:block rounded-[3rem] border-[5px] border-info-content overflow-hidden w-[450px] h-[450px] bg-black"
+          >
+            <Image
+              src={aboutInfo.img}
+              alt={aboutInfo.title}
+              width={450}
+              height={450}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </div>
         {/* Text Content */}
-        <div>
+        <motion.div
+          initial={{ x: 80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <h1 className="text-bg text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold  ">
             {aboutInfo.title}
           </h1>
@@ -29,14 +52,14 @@ const About = () => {
             {aboutInfo.description}
           </p>
           <div className="mt-8">
-            <div className="flex items-center space-x-2 mb-6">
+            <motion.div className="flex items-center space-x-2 mb-6">
               <div className="w-7 h-7 bg-blue-800 flex flex-col items-center justify-center">
                 <FaCheck className="text-white" />
               </div>
               <p className="text-sm sm:text-base md:text-lg font-bold text-error">
                 Frontend Development
               </p>
-            </div>{" "}
+            </motion.div>{" "}
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-7 h-7 bg-orange-800 flex flex-col items-center justify-center">
                 <FaCheck className="text-white" />
@@ -54,74 +77,7 @@ const About = () => {
               </p>
             </div>
           </div>
-        </div>
-        {/* Stats Content */}
-        <div className="grid grid-cols-2 gap-16 items-center lg:mx-auto">
-          {/* 1st State */}
-          <div>
-            <Image
-              src="/images/customer.png"
-              alt="image"
-              width={80}
-              height={80}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-base-content text-center">
-              {aboutInfo.client}
-            </p>
-            <p className="text-base sm:text-lg text-base-content/70">
-              Satisfied Customer
-            </p>
-          </div>
-          {/* 2nd State */}
-          <div>
-            <Image
-              src="/images/experience.png"
-              alt="image"
-              width={80}
-              height={80}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-base-content text-center">
-              {aboutInfo.experience}
-            </p>
-            <p className="text-base sm:text-lg text-base-content/70">
-              Years Experience
-            </p>
-          </div>
-          {/* 3rd State */}
-          <div>
-            <Image
-              src="/images/completed.png"
-              alt="image"
-              width={80}
-              height={80}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-base-content text-center">
-              {aboutInfo.project}
-            </p>
-            <p className="text-base sm:text-lg text-base-content/70">
-              Completed Projects
-            </p>
-          </div>
-          {/* 2nd State */}
-          <div>
-            <Image
-              src="/images/rocket.png"
-              alt="image"
-              width={80}
-              height={80}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-base-content text-center">
-              {aboutInfo.website}
-            </p>
-            <p className="text-base sm:text-lg text-base-content/70">
-              Website Launced{" "}
-            </p>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
