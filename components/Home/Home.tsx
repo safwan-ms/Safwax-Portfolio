@@ -4,6 +4,7 @@ import Hero from "./Hero/Hero";
 import About from "./About/About";
 import Skills from "./Skills/Skills";
 import Contact from "./Contact/Contact";
+import TechStack from "./Projects/TechStack";
 
 const Home = () => {
   return (
