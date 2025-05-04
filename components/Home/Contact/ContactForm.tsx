@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const ContactForm = () => {
   return (
@@ -37,8 +38,11 @@ const ContactForm = () => {
           />
         </div>
         <div>
-          <select className="w-full mt-5  bg-black text-white placeholder:text-gray-600 px-4 py-3.5 border-[1.5px] border-gray-600 border-opacity-15 outline-none">
-            <option value="" disabled selected>
+          <select
+            defaultValue="select"
+            className="w-full mt-5  bg-black text-white placeholder:text-gray-600 px-4 py-3.5 border-[1.5px] border-gray-600 border-opacity-15 outline-none"
+          >
+            <option disabled defaultValue="select">
               Select an option
             </option>
             <option value="frontend">Frontend Development</option>
@@ -52,7 +56,7 @@ const ContactForm = () => {
           placeholder="Message"
         ></textarea>
         <div className="mt-4">
-          <button className="responsive-btn btn-secondary hover:btn-secondary/90">
+          <button className="responsive-btn text-base py-2 px-2 btn-secondary hover:btn-secondary/90">
             Send Message
           </button>
         </div>

@@ -1,8 +1,9 @@
+"use client";
 import { projectData } from "@/Data/data";
 import SectionHeading from "../../Helper/SectionHeading";
 import Link from "next/link";
 import Image from "next/image";
-
+import Tilt from "react-parallax-tilt";
 const Project = () => {
   return (
     <div className="bg-base-100 pt-12 md:pt-14 lg:pt-16 pb-12 md:pb-14 lg:pb-16">
@@ -10,9 +11,9 @@ const Project = () => {
       <div className="w-[80%] mx-auto mt-20 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 items-center">
         {projectData.map((project) => {
           return (
-            <div
+            <Tilt
               key={project.id}
-              className="bg-gradient-to-br from-info-content to-neutral p-6 rounded-lg hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-br from-info-content to-neutral p-6 rounded-lg"
             >
               <Link href={project.url} target="_blank">
                 <Image
@@ -23,7 +24,7 @@ const Project = () => {
                   className="w-full"
                 />
               </Link>
-            </div>
+            </Tilt>
           );
         })}
       </div>
