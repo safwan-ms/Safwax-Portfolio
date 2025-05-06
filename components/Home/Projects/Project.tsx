@@ -12,7 +12,7 @@ const Project = () => {
   return (
     <div className="bg-base-100 pt-12 md:pt-14 lg:pt-16 pb-12 md:pb-14 lg:pb-16">
       <SectionHeading>My Projects</SectionHeading>
-      <div className="w-[80%] mx-auto mt-20 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 items-center">
+      <div className="w-[80%] mx-auto mt-20 grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 items-center">
         {projectData.map((project) => {
           return (
             <Tilt
@@ -30,7 +30,7 @@ const Project = () => {
                   />
                 </Link>
 
-                <div className="flex justify-between pt-4">
+                <div className="flex justify-between  pt-4">
                   <div className="flex justify-start">
                     <TechStack project={project} />
                   </div>

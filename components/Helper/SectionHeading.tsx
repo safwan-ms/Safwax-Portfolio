@@ -13,7 +13,7 @@ type Props = {
 const SectionHeading = ({ children }: Props) => {
   return (
     <div
-      className={`flex justify-center  uppercase  text-white text-[26px] sm:text-3xl md:text-4xl`}
+      className={`flex -rotate-6 justify-center  uppercase  text-white text-[26px] sm:text-3xl md:text-4xl`}
     >
       {/* Section Heading */}
       <p

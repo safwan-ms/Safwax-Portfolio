@@ -83,6 +83,7 @@ export const projectData = [
       { src: "/images/express.png", alt: "Express" },
       { src: "/images/react.svg", alt: "React" },
       { src: "/images/node.svg", alt: "Node.js" },
+      { src: "/images/redux.png", alt: "Redux" },
       { src: "/images/tailwind.svg", alt: "Tailwind" },
     ],
   },
@@ -113,66 +114,37 @@ export const projectData = [
   },
 ];
 
-export const skillsData = [
-  {
-    id: 1,
-    title: "React",
-    image: "/images/react.svg",
-    percent: "90%",
-  },
+export const skillsData = {
+  frontend: [
+    { id: 1, title: "React", image: "/images/react.svg" },
+    { id: 2, title: "NextJS", image: "/images/nextjs-icon.svg" },
+    { id: 3, title: "CSS", image: "/images/css.svg" },
+    { id: 4, title: "Javascript", image: "/images/js.svg" },
+    { id: 5, title: "Redux", image: "/images/redux-icon.svg" },
+    { id: 6, title: "HTML", image: "/images/html.svg" },
+    { id: 7, title: "Tailwind", image: "/images/tailwind.svg" },
+  ],
+  backend: [
+    { id: 1, title: "NodeJS", image: "/images/node.svg" },
+    { id: 2, title: "ExpressJS", image: "/images/express.png" },
+    { id: 3, title: "MongoDB", image: "/images/mongo.svg" },
+    { id: 4, title: "Python", image: "/images/python.svg" },
+    { id: 5, title: "Socket IO", image: "images/socket-io-icon.svg" },
+  ],
+  othersTools: [
+    { id: 1, title: "VS Code", image: "images/visual-studio-code-icon.svg" },
+    { id: 2, title: "Git", image: "images/visual-studio-code-icon.svg" },
+    { id: 3, title: "Github", image: "images/github-icon.svg" },
+    { id: 4, title: "Linux", image: "images/linux.svg" },
+    { id: 5, title: "Postman", image: "images/postman-icon.svg" },
+  ],
+};
+const skill = [
+  { id: 1, title: "React", image: "/images/react.svg" },
   {
     id: 2,
     title: "CSS",
     image: "/images/css.svg",
-    percent: "97%",
-  },
-  {
-    id: 3,
-    title: "JavaScript",
-    image: "/images/js.svg",
-    percent: "77%",
-  },
-  {
-    id: 4,
-    title: "TypeScript",
-    image: "/images/ts.svg",
-    percent: "67%",
-  },
-  {
-    id: 5,
-    title: "HTML",
-    image: "/images/html.svg",
-    percent: "67%",
-  },
-  {
-    id: 6,
-    title: "Node JS",
-    image: "/images/node.svg",
-    percent: "77%",
-  },
-  {
-    id: 7,
-    title: "MongoDB",
-    image: "/images/mongo.svg",
-    percent: "65%",
-  },
-  {
-    id: 8,
-    title: "Python",
-    image: "/images/python.svg",
-    percent: "55%",
-  },
-  {
-    id: 9,
-    title: "Firebase",
-    image: "/images/firebase.svg",
-    percent: "75%",
-  },
-  {
-    id: 10,
-    title: "Vue",
-    image: "/images/vue.svg",
-    percent: "35%",
   },
 ];
 
@@ -211,35 +183,8 @@ export const clientReviews = [
   },
 ];
 
-export const blogs = [
-  {
-    id: 1,
-    title: "Top Web Development Trends to Watch in 2024",
-    summary:
-      "Explore the key web development trends for 2024 and their impact on your business.",
-    date: "August 18, 2024",
-    image: "/images/b1.jpg",
-  },
-  {
-    id: 2,
-    title: "Why Your Business Needs a Custom Web Application",
-    summary:
-      "Discover why custom web applications are crucial for driving business growth and efficiency.",
-    date: "August 10, 2024",
-    image: "/images/b2.jpg",
-  },
-  {
-    id: 3,
-    title: "The Importance of Website Speed Optimization",
-    summary:
-      "Understand how website speed impacts user experience and learn essential optimization tips.",
-    date: "July 25, 2024",
-    image: "/images/b3.jpg",
-  },
-];
-
 export const contactData = {
-  phone: "+88(012345 789)",
-  email: "example@gmail.com",
-  address: "Dhaka , Bangladesh",
+  phone: "+91(890390 3608)",
+  email: "safwan.anasms@gmail.com",
+  address: "Tamil Nadu, India",
 };
