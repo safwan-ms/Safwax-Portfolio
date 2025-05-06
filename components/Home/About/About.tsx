@@ -12,7 +12,7 @@ const poppinsFont = Poppins({
 const About = () => {
   return (
     <div
-      className="bg-gradient-to-b from-base-100 to-error-content pt-12 md:pt-14 lg:pt-16 pb-12 md:pb-14 lg:pb-16"
+      className="bg-base-100 to-error-content pt-12 md:pt-14 lg:pt-16 pb-12 md:pb-14 lg:pb-16"
       id="about"
     >
       <div

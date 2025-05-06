@@ -36,19 +36,13 @@ const Project = () => {
                   </div>
                   <div>
                     <button className="btn mr-1.5  hover:btn-primary/50 p-0.5 px-1 py-0.5 btn-primary ">
-                      <Link
-                        href={project.codeUrl}
-                        target="_blank"
-                        className="flex"
-                      >
+                      <Link href={project.url} target="_blank" className="flex">
                         <FaEye size={15} />
                       </Link>
                     </button>
                     <button className="btn p-0.5 px-1 btn-secondary hover:btn-secondary/50">
                       <Link
-                        href={
-                          "https://github.com/safwan-ms/MERN-Stack-SafwaxStore"
-                        }
+                        href={project.codeUrl}
                         target="_blank"
                         className="flex"
                       >

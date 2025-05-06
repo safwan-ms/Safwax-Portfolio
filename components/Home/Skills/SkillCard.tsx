@@ -9,7 +9,7 @@ interface FrontendSkillProp {
 const SkillCard = ({ skill }: FrontendSkillProp) => {
   const { image, title } = skill;
   return (
-    <div className="py-4 px-3 sm:p-6  hover:bg-blue-900 duration-300 transition-all cursor-pointer text-center rounded-full bg-gray-900">
+    <div className="py-4 px-3 sm:p-6  hover:bg-blue-900 duration-300 transition-all cursor-pointer text-center rounded-full bg-error-content">
       <Image
         src={image}
         alt={title}
@@ -17,7 +17,7 @@ const SkillCard = ({ skill }: FrontendSkillProp) => {
         height={80}
         className="object-cover w-[60px] sm:w-[80px] mx-auto"
       />
-      <h1 className="text-[12px] sm:text-[18px] mt-4 text-white font-[600]">
+      <h1 className="text-[12px] sm:text-[18px] mt-4 text-base-content font-[600]">
         {title}
       </h1>
     </div>

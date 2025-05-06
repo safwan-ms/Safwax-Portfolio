@@ -184,7 +184,7 @@ export const clientReviews = [
 ];
 
 export const contactData = {
-  phone: "+91(890390 3608)",
+  github: "safwan-ms",
   email: "safwan.anasms@gmail.com",
   address: "Tamil Nadu, India",
 };

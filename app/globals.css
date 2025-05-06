@@ -35,7 +35,7 @@
   .text-bg {
     @apply bg-gradient-to-tl  from-[#f72585]  to-[#7209b7] text-transparent  bg-clip-text;
   }
-  .custom-bg{
+  .custom-bg {
     background-image: url();
   }
 }

@@ -1,57 +1,45 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 
 const ContactForm = () => {
+  const accessKey = process.env.WEB3FORM_ACCESS_KEY;
+
   return (
     <div className="bg-gray-900 rounded-lg p-4 sm:p-10">
       <h1 className="text-bg text-2xl md:text-3xl lg:text-[2.5rem] font-bold">
         Let's Work Together
       </h1>
       <p className="text-white ">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias adipisci
-        deserunt et debitis nam! Non
+        Ready to bring your ideas to life? Whether you have a vision or need
+        help shaping one, I'm here to collaborate and deliver results that make
+        an impact.
       </p>
       {/* Input Fields */}
-      <form className="mt-8 block w-full overflow-hidden">
+      <form
+        method="POST"
+        action={accessKey}
+        className="mt-8 block w-full overflow-hidden"
+      >
+        <input type="hidden" name="access_key" value="" />
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <input
             type="text"
-            placeholder="First Name"
+            name="name"
+            placeholder="Name"
             className="flex-1 bg-black text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-600 border-opacity-15 outline-none w-full"
+            required
           />
-          <input
-            type="text"
-            placeholder="Last Name"
-            className="flex-1 bg-black text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-600 border-opacity-15 outline-none w-full"
-          />
-        </div>
-        <div className="flex mt-5 flex-col md:flex-row items-center justify-between gap-4">
           <input
             type="email"
             placeholder="Email Address"
+            name="email"
             className="flex-1 bg-black text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-600 border-opacity-15 outline-none w-full"
-          />
-          <input
-            type="text"
-            placeholder="Phone Number"
-            className="flex-1 bg-black text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-600 border-opacity-15 outline-none w-full"
+            required
           />
         </div>
-        <div>
-          <select
-            defaultValue="select"
-            className="w-full mt-5  bg-black text-white placeholder:text-gray-600 px-4 py-3.5 border-[1.5px] border-gray-600 border-opacity-15 outline-none"
-          >
-            <option disabled defaultValue="select">
-              Select an option
-            </option>
-            <option value="frontend">Frontend Development</option>
-            <option value="backend">Backend Development</option>
-            <option value="fullstack">Full-Stack Development</option>
-          </select>
-        </div>
+
         <textarea
           className="w-full mt-5  bg-black text-white placeholder:text-gray-600 px-4 py-3.5 border-[1.5px] border-gray-600 border-opacity-15 outline-none"
+          name="message"
           rows={7}
           placeholder="Message"
         ></textarea>
