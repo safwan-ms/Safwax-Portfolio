@@ -133,7 +133,7 @@ export const skillsData = {
   ],
   othersTools: [
     { id: 1, title: "VS Code", image: "images/visual-studio-code-icon.svg" },
-    { id: 2, title: "Git", image: "images/visual-studio-code-icon.svg" },
+    { id: 2, title: "Git", image: "images/git-icon.svg" },
     { id: 3, title: "Github", image: "images/github-icon.svg" },
     { id: 4, title: "Linux", image: "images/linux.svg" },
     { id: 5, title: "Postman", image: "images/postman-icon.svg" },
