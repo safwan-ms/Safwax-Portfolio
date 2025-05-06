@@ -3,7 +3,6 @@ import { BaseInfo } from "@/Data/data";
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa";
 import * as motion from "motion/react-client";
-import Tilt from "react-parallax-tilt";
 
 const Hero = () => {
   return (

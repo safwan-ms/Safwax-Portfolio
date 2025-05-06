@@ -2,7 +2,7 @@ import React from "react";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 import SectionHeading from "@/components/Helper/SectionHeading";
-
+import * as motion from "motion/react-client";
 const Contact = () => {
   return (
     <div
@@ -10,15 +10,26 @@ const Contact = () => {
       id="contact"
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <div className="grid grid-cols-1 xl:grid-cols-2 w-[90%] sm:w-[80%] mx-auto items-center gap-10 mt-10 ">
+      <div className="grid grid-cols-1 pt-8 xl:grid-cols-2 w-[90%] sm:w-[80%] mx-auto items-center gap-10 mt-10 ">
         {/* Contact Form */}
-        <div>
+        <motion.div
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          viewport={{ once: true }}
+        >
           <ContactForm />
-        </div>
+        </motion.div>
         {/* Contact Info */}
-        <div className="xl:mx-auto">
+        <motion.div
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="xl:mx-auto"
+        >
           <ContactInfo />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

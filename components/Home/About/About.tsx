@@ -1,14 +1,9 @@
 import { aboutInfo } from "@/Data/data";
 import { FaCheck } from "react-icons/fa";
 import * as motion from "motion/react-client";
-import { Poppins } from "next/font/google";
 import Image from "next/image";
 import SectionHeading from "@/components/Helper/SectionHeading";
 
-const poppinsFont = Poppins({
-  subsets: ["latin"],
-  weight: "500",
-});
 const About = () => {
   return (
     <div

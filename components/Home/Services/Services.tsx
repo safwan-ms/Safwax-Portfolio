@@ -4,7 +4,6 @@ import React from "react";
 import SectionHeading from "../../Helper/SectionHeading";
 import { servicesData } from "@/Data/data";
 import ServiceCard from "./ServiceCard";
-import * as motion from "motion/react-client";
 
 const Services = () => {
   return (

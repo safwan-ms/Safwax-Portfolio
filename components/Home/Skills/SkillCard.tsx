@@ -8,15 +8,6 @@ interface FrontendSkillProp {
   skill: FrontendSkill;
 }
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
 const SkillCard = ({ skill }: FrontendSkillProp) => {
   const { image, title } = skill;
   return (

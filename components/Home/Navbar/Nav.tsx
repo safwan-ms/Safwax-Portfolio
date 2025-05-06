@@ -1,5 +1,4 @@
 import { navLinks } from "@/constant/constant";
-import Image from "next/image";
 import Link from "next/link";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import ThemeController from "./ThemeController";

@@ -1,5 +1,3 @@
-import React from "react";
-
 const ContactForm = () => {
   const accessKey = process.env.WEB3FORM_ACCESS_KEY;
 
