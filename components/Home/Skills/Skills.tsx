@@ -6,7 +6,10 @@ import SubHeading from "@/components/Helper/SubHeading";
 
 const Skills = () => {
   return (
-    <div className="bg-base-100 pt-12 md:pt-14 lg:pt-16 pb-12 md:pb-14 lg:pb-16">
+    <div
+      className="bg-base-100 pt-12 md:pt-14 lg:pt-16 pb-12 md:pb-14 lg:pb-16"
+      id="skills"
+    >
       <SectionHeading>My Skills</SectionHeading>
 
       <SubHeading>Frontend</SubHeading>

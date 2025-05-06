@@ -7,7 +7,10 @@ import Tilt from "react-parallax-tilt";
 
 const Hero = () => {
   return (
-    <div className="w-full custom-bg pb-12 md:pb-14 lg:pb-16 pt-16 min-h-screen flex items-center overflow-hidden  bg-base-100">
+    <div
+      className="w-full custom-bg pb-12 md:pb-14 lg:pb-16 pt-16 min-h-screen flex items-center overflow-hidden  bg-base-100"
+      id="home"
+    >
       <div className="flex justify-center flex-col w-4/5 h-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           {/* Text Content */}
