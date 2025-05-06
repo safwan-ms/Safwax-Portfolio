@@ -83,7 +83,7 @@ export const projectData = [
       { src: "/images/express-js.png", alt: "Express" },
       { src: "/images/react.svg", alt: "React" },
       { src: "/images/node.svg", alt: "Node.js" },
-      { src: "/images/redux.png", alt: "Redux" },
+      { src: "/images/redux-icon.svg", alt: "Redux" },
       { src: "/images/tailwind.svg", alt: "Tailwind" },
     ],
   },

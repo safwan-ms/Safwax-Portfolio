@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 import Image from "next/image";
 interface FrontendSkill {
   title: string;
@@ -6,10 +7,20 @@ interface FrontendSkill {
 interface FrontendSkillProp {
   skill: FrontendSkill;
 }
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
 const SkillCard = ({ skill }: FrontendSkillProp) => {
   const { image, title } = skill;
   return (
-    <div className="py-4 px-3 sm:p-6  hover:bg-info/30 duration-300 transition-all cursor-pointer text-center rounded-full bg-base-300">
+    <motion.div className="py-4 px-3 sm:p-6  hover:bg-info/30 duration-300 transition-all cursor-pointer text-center rounded-full bg-base-300">
       <Image
         src={image}
         alt={title}
@@ -20,7 +31,7 @@ const SkillCard = ({ skill }: FrontendSkillProp) => {
       <h1 className="text-[12px] sm:text-[18px] mt-4 text-base-content font-[600]">
         {title}
       </h1>
-    </div>
+    </motion.div>
   );
 };
 
