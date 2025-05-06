@@ -4,6 +4,7 @@ import React from "react";
 import SectionHeading from "../../Helper/SectionHeading";
 import { servicesData } from "@/Data/data";
 import ServiceCard from "./ServiceCard";
+import * as motion from "motion/react-client";
 
 const Services = () => {
   return (
@@ -13,8 +14,8 @@ const Services = () => {
     >
       <SectionHeading>Services</SectionHeading>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-[80%] mx-auto items-center mt-20">
-        {servicesData.map((service) => (
-          <ServiceCard key={service.id} service={service} />
+        {servicesData.map((service, index) => (
+          <ServiceCard key={service.id} service={service} index={index} />
         ))}
       </div>
     </div>
