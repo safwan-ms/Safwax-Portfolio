@@ -4,11 +4,11 @@ const ContactForm = () => {
   return (
     <div className="bg-gray-900 rounded-lg p-4 sm:p-10">
       <h1 className="text-bg text-2xl md:text-3xl lg:text-[2.5rem] font-bold">
-        Let's Work Together
+        Let&apos;s Work Together
       </h1>
       <p className="text-white ">
         Ready to bring your ideas to life? Whether you have a vision or need
-        help shaping one, I'm here to collaborate and deliver results that make
+        help shaping one, I am here to collaborate and deliver results that make
         an impact.
       </p>
       {/* Input Fields */}
