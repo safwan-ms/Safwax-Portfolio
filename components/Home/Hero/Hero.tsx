@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FaDownload } from "react-icons/fa";
 import * as motion from "motion/react-client";
 import ContactForm from "../Contact/ContactForm";
+import SocialMediaIcon from "./SocialMediaIcon";
 
 const Hero = () => {
   return (
@@ -54,6 +55,12 @@ const Hero = () => {
             >
               {BaseInfo.description}
             </motion.p>
+            <motion.div className="flex mt-3">
+              {BaseInfo.socialMedia.map((icon, index) => (
+                <SocialMediaIcon key={index} icon={icon} index={index} />
+              ))}
+            </motion.div>
+
             {/* Button */}
             <div className="flex space-x-4">
               <motion.button
