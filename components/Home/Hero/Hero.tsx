@@ -3,7 +3,6 @@ import { BaseInfo } from "@/Data/data";
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa";
 import * as motion from "motion/react-client";
-import { useState } from "react";
 import ContactForm from "../Contact/ContactForm";
 
 const Hero = () => {
