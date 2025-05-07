@@ -17,7 +17,7 @@ const ServiceCard = ({ service, index }: ServiceProps) => {
     <motion.div
       initial={{ x: 100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
-      transition={{ duration: 1, delay: index * 0.3 }}
+      transition={{ duration: 1, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
       <Tilt className="shadow-2xl border-2 border-error-content p-6 rounded-lg bg-gradient-to-br from-info-content to-neutral">

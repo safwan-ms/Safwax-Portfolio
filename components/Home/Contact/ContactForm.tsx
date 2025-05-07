@@ -1,6 +1,5 @@
 const ContactForm = () => {
   const accessKey = process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY;
-  console.log(accessKey);
   return (
     <div className="bg-gray-900 rounded-lg p-4 sm:p-10">
       <h1 className="text-bg text-2xl md:text-3xl lg:text-[2.5rem] font-bold">

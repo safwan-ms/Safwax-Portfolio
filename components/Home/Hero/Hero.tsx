@@ -3,6 +3,8 @@ import { BaseInfo } from "@/Data/data";
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa";
 import * as motion from "motion/react-client";
+import { useState } from "react";
+import ContactForm from "../Contact/ContactForm";
 
 const Hero = () => {
   return (
@@ -62,7 +64,9 @@ const Hero = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 className="btn responsive-btn px-2 text-sm btn-secondary mt-5"
               >
-                <span>Download CV</span>
+                <a href="images/Safwan_Resume.pdf" download>
+                  <span>Download CV</span>
+                </a>
                 <FaDownload />
               </motion.button>
               <motion.button
@@ -71,11 +75,30 @@ const Hero = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true, amount: 0.5 }}
                 className="btn btn-primary px-2 text-sm responsive-btn mt-5"
+                onClick={() => {
+                  const modal = document.getElementById(
+                    "my_modal_3"
+                  ) as HTMLDialogElement;
+                  if (modal) modal.showModal();
+                }}
               >
                 <span>Hire Me</span>
               </motion.button>
             </div>
           </div>
+
+          <dialog id="my_modal_3" className="modal">
+            <div className="modal-box  p-0 m-0">
+              <form method="dialog p-0 m-0">
+                {/* if there is a button in form, it will close the modal */}
+                <button className="btn btn-sm btn-circle text-base-content btn-ghost absolute right-2 top-2">
+                  ✕
+                </button>
+              </form>
+              <ContactForm />
+            </div>
+          </dialog>
+
           {/* Image content */}
           <motion.div
             initial={{ scale: 0, opacity: 0 }}

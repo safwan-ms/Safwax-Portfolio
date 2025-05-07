@@ -3,7 +3,7 @@ export const BaseInfo = {
   position: "Full Stack Web Developer",
   description:
     "Full-stack web developer building fast, scalable, and user-friendly applications. Passionate about clean code and modern web technologies.",
-  profilePic: "/images/image.png",
+  profilePic: "/images/hero.png",
 };
 
 export const aboutInfo = {
@@ -84,6 +84,16 @@ export const projectData = [
       { src: "/images/react.svg", alt: "React" },
       { src: "/images/node.svg", alt: "Node.js" },
       { src: "/images/redux-icon.svg", alt: "Redux" },
+      { src: "/images/tailwind.svg", alt: "Tailwind" },
+    ],
+  },
+  {
+    id: 2,
+    image: "/images/p2.png",
+    url: "https://walkway-wonders.netlify.app",
+    codeUrl: "https://github.com/safwan-ms/Walkway-Wonders-Shoecart.git",
+    techStack: [
+      { src: "/images/react.svg", alt: "React" },
       { src: "/images/tailwind.svg", alt: "Tailwind" },
     ],
   },

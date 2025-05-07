@@ -27,7 +27,7 @@ const ProjectCard = ({ project, index }: ProjectProp) => {
     <motion.div
       initial={{ scale: 0, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1, delay: index * 0.3 }}
+      transition={{ duration: 1, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
       <Tilt
@@ -41,7 +41,7 @@ const ProjectCard = ({ project, index }: ProjectProp) => {
               alt="project"
               width={300}
               height={200}
-              className="w-full"
+              className="object-cover object-top h-[300px]"
             />
           </Link>
 
