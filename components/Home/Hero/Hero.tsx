@@ -5,7 +5,18 @@ import { FaDownload } from "react-icons/fa";
 import * as motion from "motion/react-client";
 import ContactForm from "../Contact/ContactForm";
 import SocialMediaIcon from "./SocialMediaIcon";
-
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 const Hero = () => {
   return (
     <div
@@ -55,9 +66,17 @@ const Hero = () => {
             >
               {BaseInfo.description}
             </motion.p>
-            <motion.div className="flex mt-3">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className="flex mt-3"
+            >
               {BaseInfo.socialMedia.map((icon, index) => (
-                <SocialMediaIcon key={index} icon={icon} index={index} />
+                <motion.div variants={itemVariants} key={index}>
+                  <SocialMediaIcon index={index} icon={icon} />
+                </motion.div>
               ))}
             </motion.div>
 
