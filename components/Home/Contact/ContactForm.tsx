@@ -1,6 +1,6 @@
 const ContactForm = () => {
-  const accessKey = process.env.WEB3FORM_ACCESS_KEY;
-
+  const accessKey = process.env.NEXT_PUBLIC_WEB3FORM_ACCESS_KEY;
+  console.log(accessKey);
   return (
     <div className="bg-gray-900 rounded-lg p-4 sm:p-10">
       <h1 className="text-bg text-2xl md:text-3xl lg:text-[2.5rem] font-bold">
@@ -14,10 +14,10 @@ const ContactForm = () => {
       {/* Input Fields */}
       <form
         method="POST"
-        action={accessKey}
+        action="https://api.web3forms.com/submit"
         className="mt-8 block w-full overflow-hidden"
       >
-        <input type="hidden" name="access_key" value="" />
+        <input type="hidden" name="access_key" value={accessKey} />
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <input
             type="text"
