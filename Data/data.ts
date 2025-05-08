@@ -125,6 +125,7 @@ export const skillsData = {
     { id: 5, title: "Redux", image: "/images/redux-icon.svg" },
     { id: 6, title: "HTML", image: "/images/html.svg" },
     { id: 7, title: "Tailwind", image: "/images/tailwind.svg" },
+    { id: 8, title: "Motion Dev", image: "/images/motion-dev-icon.png" },
   ],
   backend: [
     { id: 1, title: "NodeJS", image: "/images/node.svg" },
