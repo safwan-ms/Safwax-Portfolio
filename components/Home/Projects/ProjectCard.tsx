@@ -12,6 +12,7 @@ interface Project {
   image: string;
   url: string;
   codeUrl: string;
+  title: string;
   techStack: {
     src: string;
     alt: string;
@@ -44,6 +45,7 @@ const ProjectCard = ({ project, index }: ProjectProp) => {
               className="object-cover object-top h-[300px]"
             />
           </Link>
+          <p className="font-bold text-white mt-3 mx-1">{project.title}</p>
 
           <div className="flex justify-between  pt-4">
             <div className="flex justify-start">

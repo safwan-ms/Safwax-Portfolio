@@ -95,6 +95,7 @@ export const projectData = [
     image: "/images/p1.png",
     url: "https://mern-stack-safwaxstore.onrender.com",
     codeUrl: "https://github.com/safwan-ms/MERN-Stack-SafwaxStore",
+    title: "MERN Stack Ecommerce Backend",
     techStack: [
       { src: "/images/mongo.svg", alt: "MongoDB" },
       { src: "/images/express-js.png", alt: "Express" },
@@ -109,6 +110,7 @@ export const projectData = [
     image: "/images/p2.jpg",
     url: "https://walkway-wonders.netlify.app",
     codeUrl: "https://github.com/safwan-ms/Walkway-Wonders-Shoecart.git",
+    title: "Walway wonders Shoecart using React",
     techStack: [
       { src: "/images/react.svg", alt: "React" },
       { src: "/images/tailwind.svg", alt: "Tailwind" },
