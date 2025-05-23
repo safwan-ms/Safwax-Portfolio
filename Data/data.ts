@@ -107,13 +107,27 @@ export const projectData = [
   },
   {
     id: 2,
+    image: "/images/p3.png",
+    url: "https://sky-cast-weather-app-react-js.vercel.app",
+    codeUrl: "https://github.com/safwan-ms/SkyCast-Weather-App-ReactJS",
+    title: "SkyCast weather App",
+    techStack: [
+      { src: "/images/react.svg", alt: "React" },
+      { src: "/images/ts.svg", alt: "TypeScript" },
+      { src: "/images/tailwind.svg", alt: "Tailwind" },
+      { src: "/images/daisyUI.png", alt: "DaisyUI" },
+    ],
+  },
+  {
+    id: 3,
     image: "/images/p2.jpg",
     url: "https://walkway-wonders.netlify.app",
     codeUrl: "https://github.com/safwan-ms/Walkway-Wonders-Shoecart.git",
-    title: "Walway wonders Shoecart using React",
+    title: "Walway wonders Shoecart",
     techStack: [
       { src: "/images/react.svg", alt: "React" },
       { src: "/images/tailwind.svg", alt: "Tailwind" },
+      { src: "/images/daisyUI.png", alt: "DaisyUI" },
     ],
   },
 ];
@@ -122,12 +136,13 @@ export const skillsData = {
   frontend: [
     { id: 1, title: "React", image: "/images/react.svg" },
     { id: 2, title: "NextJS", image: "/images/nextjs-icon.svg" },
-    { id: 3, title: "CSS", image: "/images/css.svg" },
-    { id: 4, title: "Javascript", image: "/images/js.svg" },
-    { id: 5, title: "Redux", image: "/images/redux-icon.svg" },
-    { id: 6, title: "HTML", image: "/images/html.svg" },
-    { id: 7, title: "Tailwind", image: "/images/tailwind.svg" },
-    { id: 8, title: "Motion Dev", image: "/images/motion-dev-icon.png" },
+    { id: 3, title: "TypeScript", image: "/images/ts.svg" },
+    { id: 4, title: "CSS", image: "/images/css.svg" },
+    { id: 5, title: "JavaScript", image: "/images/js.svg" },
+    { id: 6, title: "Redux", image: "/images/redux-icon.svg" },
+    { id: 7, title: "HTML", image: "/images/html.svg" },
+    { id: 8, title: "Tailwind", image: "/images/tailwind.svg" },
+    { id: 9, title: "Motion Dev", image: "/images/motion-dev-icon.png" },
   ],
   backend: [
     { id: 1, title: "NodeJS", image: "/images/node.svg" },
