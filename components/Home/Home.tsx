@@ -10,9 +10,9 @@ const Home = () => {
     <div className="overflow-hidden bg-gradient-to-b from-base-100 to-error-content">
       <Hero />
       <About />
-      <Services />
       <Projects />
       <Skills />
+      <Services />
       <Contact />
     </div>
   );
