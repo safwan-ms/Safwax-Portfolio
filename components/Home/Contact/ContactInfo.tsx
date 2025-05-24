@@ -12,8 +12,10 @@ const ContactInfo = () => {
             <FaGithub className="w-5 h-5 md:w-7 md:h-7 text-white" />
           </div>
           <div>
-            <h1 className="text-lg sm:text-xl text-white font-bold">Github</h1>
-            <p className="text-base sm:text-lg text-white text-opacity-70">
+            <h1 className="text-lg sm:text-xl text-base-content font-bold ">
+              Github
+            </h1>
+            <p className="text-base sm:text-lg text-base-content text-opacity-70">
               {contactData.github}
             </p>
           </div>
@@ -24,10 +26,10 @@ const ContactInfo = () => {
             <FaEnvelope className="w-5 h-5 md:w-7 md:h-7 text-white" />
           </div>
           <div>
-            <h1 className="text-lg sm:text-xl text-white font-bold">
+            <h1 className="text-lg sm:text-xl text-base-content font-bold">
               Email Address
             </h1>
-            <p className="text-base sm:text-lg text-white text-opacity-70">
+            <p className="text-base sm:text-lg text-base-content text-opacity-70">
               {contactData.email}
             </p>
           </div>
@@ -38,8 +40,10 @@ const ContactInfo = () => {
             <FaMap className="w-5 h-5 md:w-7 md:h-7 text-white" />
           </div>
           <div>
-            <h1 className="text-lg sm:text-xl text-white font-bold">Address</h1>
-            <p className="text-base sm:text-lg text-white text-opacity-70">
+            <h1 className="text-lg sm:text-xl text-base-content font-bold">
+              Address
+            </h1>
+            <p className="text-base sm:text-lg text-base-content text-opacity-70">
               {contactData.address}
             </p>
           </div>

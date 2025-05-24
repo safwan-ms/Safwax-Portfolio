@@ -33,16 +33,16 @@ const ProjectCard = ({ project, index }: ProjectProp) => {
     >
       <Tilt
         key={project.id}
-        className="bg-gradient-to-br from-info-content to-neutral p-6 rounded-lg"
+        className="bg-gradient-to-br from-info-content to-neutral p-4 rounded-lg"
       >
         <div>
           <Link href={project.url} target="_blank">
             <Image
               src={project.image}
               alt="project"
-              width={300}
+              width={400}
               height={200}
-              className="object-cover object-top h-[300px]"
+              className="object-cover object-top h-[300px] lg:h-[400px] rounded-md"
             />
           </Link>
           <p className="font-bold text-white mt-3 mx-1">{project.title}</p>

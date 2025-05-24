@@ -38,7 +38,7 @@ const Skills = () => {
         {skillsData.frontend.map((skill) => {
           return (
             <motion.div key={skill.id} variants={itemVariants}>
-              <SkillCard skill={skill} />;
+              <SkillCard skill={skill} />
             </motion.div>
           );
         })}
@@ -56,7 +56,7 @@ const Skills = () => {
         {skillsData.backend.map((skill) => {
           return (
             <motion.div key={skill.id} variants={itemVariants}>
-              <SkillCard skill={skill} />;
+              <SkillCard skill={skill} />
             </motion.div>
           );
         })}
@@ -74,7 +74,7 @@ const Skills = () => {
         {skillsData.othersTools.map((skill) => {
           return (
             <motion.div key={skill.id} variants={itemVariants}>
-              <SkillCard skill={skill} />;
+              <SkillCard skill={skill} />
             </motion.div>
           );
         })}

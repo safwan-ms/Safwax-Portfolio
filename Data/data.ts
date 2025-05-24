@@ -120,6 +120,18 @@ export const projectData = [
   },
   {
     id: 3,
+    image: "/images/p4.png",
+    url: "https://todo-list-phi-plum-35.vercel.app",
+    codeUrl: "https://github.com/safwan-ms/Todo-List-Typescript",
+    title: "Todo List App",
+    techStack: [
+      { src: "/images/react.svg", alt: "React" },
+      { src: "/images/ts.svg", alt: "TypeScript" },
+      { src: "/images/tailwind.svg", alt: "Tailwind" },
+    ],
+  },
+  {
+    id: 4,
     image: "/images/p2.jpg",
     url: "https://walkway-wonders.netlify.app",
     codeUrl: "https://github.com/safwan-ms/Walkway-Wonders-Shoecart.git",
@@ -127,7 +139,6 @@ export const projectData = [
     techStack: [
       { src: "/images/react.svg", alt: "React" },
       { src: "/images/tailwind.svg", alt: "Tailwind" },
-      { src: "/images/daisyUI.png", alt: "DaisyUI" },
     ],
   },
 ];
