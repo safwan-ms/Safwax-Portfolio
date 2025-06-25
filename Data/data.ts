@@ -7,7 +7,7 @@ export const BaseInfo = {
   socialMedia: [
     {
       src: "/images/github-icon.svg",
-      url: "www.github.com/safwan-ms",
+      url: "https://www.github.com/safwan-ms",
       alt: "Github",
     },
     {
