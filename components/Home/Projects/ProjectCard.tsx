@@ -2,7 +2,6 @@
 import * as motion from "motion/react-client";
 import Link from "next/link";
 import Image from "next/image";
-import Tilt from "react-parallax-tilt";
 import { FaCode } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import TechStack from "./TechStack";
