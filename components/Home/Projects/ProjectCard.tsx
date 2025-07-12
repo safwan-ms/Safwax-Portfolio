@@ -6,6 +6,7 @@ import Tilt from "react-parallax-tilt";
 import { FaCode } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import TechStack from "./TechStack";
+import TiltCard from "@/components/Helper/TiltCard";
 
 interface Project {
   id: number;
@@ -31,11 +32,8 @@ const ProjectCard = ({ project, index }: ProjectProp) => {
       transition={{ duration: 1, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <Tilt
-        key={project.id}
-        className="bg-gradient-to-br from-info-content to-neutral p-4 rounded-lg"
-      >
-        <div>
+      <TiltCard key={project.id}>
+        <div className="bg-gradient-to-br from-info-content to-neutral p-4 rounded-lg">
           <Link href={project.url} target="_blank">
             <Image
               src={project.image}
@@ -65,7 +63,7 @@ const ProjectCard = ({ project, index }: ProjectProp) => {
             </div>
           </div>
         </div>
-      </Tilt>
+      </TiltCard>
     </motion.div>
   );
 };

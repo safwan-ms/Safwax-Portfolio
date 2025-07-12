@@ -5,6 +5,7 @@ import { FaDownload } from "react-icons/fa";
 import * as motion from "motion/react-client";
 import ContactForm from "../Contact/ContactForm";
 import SocialMediaIcon from "./SocialMediaIcon";
+import TiltCard from "@/components/Helper/TiltCard";
 const containerVariants = {
   hidden: {},
   visible: {
@@ -33,7 +34,7 @@ const Hero = () => {
                 alt={BaseInfo.name}
                 width={250}
                 height={250}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </motion.div>
 
@@ -125,21 +126,23 @@ const Hero = () => {
           </dialog>
 
           {/* Image content */}
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mx-auto bg-cover hidden lg:block rounded-[3rem] border-[5px] border-info-content overflow-hidden w-[450px] h-[450px] bg-black"
-          >
-            <Image
-              src={BaseInfo.profilePic}
-              alt={BaseInfo.name}
-              width={450}
-              height={450}
-              className="w-full h-full object-cover"
-            />
-          </motion.div>
+          <TiltCard>
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="mx-auto bg-cover hidden lg:block rounded-[3rem] border-[5px] border-info-content overflow-hidden w-[450px] h-[450px] bg-black"
+            >
+              <Image
+                src={BaseInfo.profilePic}
+                alt={BaseInfo.name}
+                width={450}
+                height={450}
+                className="w-full h-full object-cover object-top"
+              />
+            </motion.div>
+          </TiltCard>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ export const BaseInfo = {
   position: "Full Stack Web Developer",
   description:
     "Full-stack web developer building fast, scalable, and user-friendly applications. Passionate about clean code and modern web technologies.",
-  profilePic: "/images/hero.png",
+  profilePic: "/images/profile.png",
   socialMedia: [
     {
       src: "/images/github-icon.svg",
@@ -92,6 +92,21 @@ export const servicesData = [
 export const projectData = [
   {
     id: 1,
+    image: "/images/p2.png",
+    url: "https://socketbuzz-chat-app.onrender.com/",
+    codeUrl: "https://github.com/safwan-ms/MERN-Real-Time-Chat-App",
+    title: "MERN Real Time Chat App",
+    techStack: [
+      { src: "/images/mongo.svg", alt: "MongoDB" },
+      { src: "/images/express-js.png", alt: "Express" },
+      { src: "/images/react.svg", alt: "React" },
+      { src: "/images/node.svg", alt: "Node.js" },
+      { src: "/images/socket-io-icon.svg", alt: "Socket IO" },
+      { src: "/images/ts.svg", alt: "TypeScript" },
+    ],
+  },
+  {
+    id: 2,
     image: "/images/p1.png",
     url: "https://mern-stack-safwaxstore.onrender.com",
     codeUrl: "https://github.com/safwan-ms/MERN-Stack-SafwaxStore",
@@ -105,8 +120,9 @@ export const projectData = [
       { src: "/images/tailwind.svg", alt: "Tailwind" },
     ],
   },
+
   {
-    id: 2,
+    id: 3,
     image: "/images/p3.png",
     url: "https://sky-cast-weather-app-react-js.vercel.app",
     codeUrl: "https://github.com/safwan-ms/SkyCast-Weather-App-ReactJS",
@@ -119,7 +135,7 @@ export const projectData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     image: "/images/p4.png",
     url: "https://todo-list-phi-plum-35.vercel.app",
     codeUrl: "https://github.com/safwan-ms/Todo-List-Typescript",
@@ -131,8 +147,8 @@ export const projectData = [
     ],
   },
   {
-    id: 4,
-    image: "/images/p2.jpg",
+    id: 5,
+    image: "/images/p5.jpg",
     url: "https://walkway-wonders.netlify.app",
     codeUrl: "https://github.com/safwan-ms/Walkway-Wonders-Shoecart.git",
     title: "Walway wonders Shoecart",
