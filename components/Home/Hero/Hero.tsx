@@ -6,6 +6,7 @@ import * as motion from "motion/react-client";
 import ContactForm from "../Contact/ContactForm";
 import SocialMediaIcon from "./SocialMediaIcon";
 import TiltCard from "@/components/Helper/TiltCard";
+import { easeOut } from "motion";
 const containerVariants = {
   hidden: {},
   visible: {
@@ -16,7 +17,7 @@ const containerVariants = {
 };
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } },
 };
 const Hero = () => {
   return (
