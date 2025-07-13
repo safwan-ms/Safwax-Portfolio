@@ -4,6 +4,7 @@ import React from "react";
 import SkillCard from "./SkillCard";
 import SubHeading from "@/components/Helper/SubHeading";
 import * as motion from "motion/react-client";
+import { easeOut } from "motion";
 
 const containerVariants = {
   hidden: {},
@@ -15,7 +16,7 @@ const containerVariants = {
 };
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } },
 };
 
 const Skills = () => {
