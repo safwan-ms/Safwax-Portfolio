@@ -4,7 +4,6 @@ import React from "react";
 import SkillCard from "./SkillCard";
 import SubHeading from "@/components/Helper/SubHeading";
 import * as motion from "motion/react-client";
-import { easeOut } from "motion";
 
 const containerVariants = {
   hidden: {},
