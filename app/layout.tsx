@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/images/icon.png", // ✅ Add this line
+  },
   openGraph: {
     title: "Safwan Portfolio",
     description:
