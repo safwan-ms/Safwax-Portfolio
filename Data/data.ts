@@ -92,7 +92,7 @@ export const servicesData = [
 export const projectData = [
   {
     id: 1,
-    image: "/images/p2.png",
+    image: "/images/p1.png",
     url: "https://socketbuzz-chat-app.onrender.com/",
     codeUrl: "https://github.com/safwan-ms/MERN-Real-Time-Chat-App",
     title: "MERN Real Time Chat App",
@@ -107,7 +107,7 @@ export const projectData = [
   },
   {
     id: 2,
-    image: "/images/p1.png",
+    image: "/images/p2.png",
     url: "https://mern-stack-safwaxstore.onrender.com",
     codeUrl: "https://github.com/safwan-ms/MERN-Stack-SafwaxStore",
     title: "MERN Stack Ecommerce Backend",
@@ -120,10 +120,21 @@ export const projectData = [
       { src: "/images/tailwind.svg", alt: "Tailwind" },
     ],
   },
-
   {
     id: 3,
-    image: "/images/p3.png",
+    image: "/images/p3.jpg",
+    url: "https://walkway-wonders.netlify.app",
+    codeUrl: "https://github.com/safwan-ms/Walkway-Wonders-Shoecart.git",
+    title: "Walway wonders Shoecart",
+    techStack: [
+      { src: "/images/react.svg", alt: "React" },
+      { src: "/images/tailwind.svg", alt: "Tailwind" },
+    ],
+  },
+
+  {
+    id: 4,
+    image: "/images/p4.png",
     url: "https://sky-cast-weather-app-react-js.vercel.app",
     codeUrl: "https://github.com/safwan-ms/SkyCast-Weather-App-ReactJS",
     title: "SkyCast weather App",
@@ -135,25 +146,14 @@ export const projectData = [
     ],
   },
   {
-    id: 4,
-    image: "/images/p4.png",
+    id: 5,
+    image: "/images/p5.png",
     url: "https://todo-list-phi-plum-35.vercel.app",
     codeUrl: "https://github.com/safwan-ms/Todo-List-Typescript",
     title: "Todo List App",
     techStack: [
       { src: "/images/react.svg", alt: "React" },
       { src: "/images/ts.svg", alt: "TypeScript" },
-      { src: "/images/tailwind.svg", alt: "Tailwind" },
-    ],
-  },
-  {
-    id: 5,
-    image: "/images/p5.jpg",
-    url: "https://walkway-wonders.netlify.app",
-    codeUrl: "https://github.com/safwan-ms/Walkway-Wonders-Shoecart.git",
-    title: "Walway wonders Shoecart",
-    techStack: [
-      { src: "/images/react.svg", alt: "React" },
       { src: "/images/tailwind.svg", alt: "Tailwind" },
     ],
   },

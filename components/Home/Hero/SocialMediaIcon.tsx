@@ -15,6 +15,7 @@ const SocialMediaIcon = ({ icon, index }: IconProp) => {
   return (
     <div className="flex items-center ">
       <Link
+        target="_blank"
         href={icon.url}
         className={`  w-10 border h-10 shadow-md sm:w-11 sm:h-11 lg:w-13 lg:h-13 rounded-full bg-[#fff] flex items-center justify-center ${
           index !== 0 ? "-ml-2 md:-ml-2.5 lg:-ml-3.5" : ""
