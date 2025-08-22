@@ -12,7 +12,7 @@ const poppinsFont = Poppins({
 const Nav = () => {
   return (
     <div
-      className={`fixed px-5 top-0 left-0 w-full h-[10vh] bg-opacity-70 backdrop-blur-md shadow-md z-50`}
+      className={`fixed top-0 left-0 w-full h-[10vh] bg-opacity-70 backdrop-blur-md shadow-md z-50 px-5`}
     >
       <div className="flex items-center  justify-between w-[95%] sm:w-[90%] xl:w-[80%] mx-auto">
         {/* LOGO */}

@@ -1,5 +1,5 @@
 import Projects from "./Projects/Project";
-import Services from "./Services/Services";
+// import Services from "./Services/Services";
 import Hero from "./Hero/Hero";
 import About from "./About/About";
 import Skills from "./Skills/Skills";
@@ -12,7 +12,7 @@ const Home = () => {
       <About />
       <Projects />
       <Skills />
-      <Services />
+      {/* <Services /> */}
       <Contact />
     </div>
   );
