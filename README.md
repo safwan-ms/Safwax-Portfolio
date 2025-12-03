@@ -59,7 +59,7 @@ Safwax-Portfolio/
 ### Prerequisites
 
 - Node.js 18+ 
-- npm or yarn
+- npm 
 
 ### Installation
 
@@ -72,8 +72,6 @@ Safwax-Portfolio/
 2. **Install dependencies**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. **Run the development server**
