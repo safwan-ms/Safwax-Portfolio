@@ -34,12 +34,7 @@ const skills = [
   },
 ];
 
-const stats = [
-  { value: aboutInfo.client, label: "Happy Clients" },
-  { value: aboutInfo.experience, label: "Years Experience" },
-  { value: aboutInfo.project, label: "Projects Done" },
-  { value: aboutInfo.website, label: "Websites Built" },
-];
+
 
 /* ─── Animation Variants ─── */
 const staggerContainer: Variants = {
@@ -256,29 +251,7 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* ── Stats Row with scroll parallax ── */}
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          style={{ y: statsY }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              variants={fadeUp}
-              className="group relative text-center p-6 rounded-2xl bg-base-content/2 border border-base-content/5 hover:border-[#f72585]/20 hover:bg-base-content/5 transition-all duration-500 overflow-hidden"
-            >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-b from-[#f72585]/5 to-transparent pointer-events-none" />
-              <p className="relative text-3xl md:text-4xl font-bold bg-linear-to-r from-[#f72585] to-[#7209b7] bg-clip-text text-transparent">
-                {stat.value}
-              </p>
-              <p className="relative text-xs font-medium text-base-content/40 mt-2 uppercase tracking-wider">
-                {stat.label}
-              </p>
-            </motion.div>
+        
           ))}
         </motion.div>
       </div>
