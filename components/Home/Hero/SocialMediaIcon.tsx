@@ -13,20 +13,20 @@ interface IconProp {
 
 const SocialMediaIcon = ({ icon, index }: IconProp) => {
   return (
-    <div className="flex items-center ">
+    <div className="flex items-center">
       <Link
         target="_blank"
         href={icon.url}
-        className={`  w-10 border h-10 shadow-md sm:w-11 sm:h-11 lg:w-13 lg:h-13 rounded-full bg-[#fff] flex items-center justify-center ${
-          index !== 0 ? "-ml-2 md:-ml-2.5 lg:-ml-3.5" : ""
+        className={`group relative w-11 h-11 sm:w-12 sm:h-12 lg:w-13 lg:h-13 rounded-2xl bg-base-content/5 border border-base-content/10 backdrop-blur-sm flex items-center justify-center hover:bg-base-content/10 hover:border-[#f72585]/30 hover:shadow-[0_0_20px_rgba(247,37,133,0.15)] transition-all duration-300 ${
+          index !== 0 ? "ml-3" : ""
         }`}
       >
         <Image
           src={icon.src}
           alt={icon.alt}
-          width={30}
-          height={30}
-          className="object-contain w-9  h-9  sm:w-9.5 sm:h-9.5 lg:w-10 lg:h-10  p-1"
+          width={24}
+          height={24}
+          className="object-contain w-5 h-5 sm:w-5.5 sm:h-5.5 lg:w-6 lg:h-6 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
         />
       </Link>
     </div>

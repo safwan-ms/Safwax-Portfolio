@@ -3,7 +3,9 @@
 @plugin "@tailwindcss/typography";
 
 @plugin "daisyui" {
-  themes: valentine --default, synthwave --prefersdark;
+  themes:
+    valentine --default,
+    synthwave --prefersdark;
 }
 
 [data-theme="synthwave"] .dynamic-text {
@@ -18,16 +20,7 @@
 
 @layer components {
   .navlink {
-    @apply relative text-base font-medium w-fit block text-white;
-
-    &::after {
-      content: "";
-      @apply absolute bottom-0 left-0 h-[3px] bg-warning w-full scale-x-0 transition duration-300 origin-right;
-    }
-
-    &:hover::after {
-      @apply scale-x-100 origin-left;
-    }
+    @apply relative text-[15px] font-medium w-fit block transition-colors duration-300;
   }
   .responsive-btn {
     @apply btn-sm btn lg:btn-lg xl:btn-xl;
@@ -36,11 +29,25 @@
     @apply bg-gradient-to-tl  from-[#f72585]  to-[#7209b7] text-transparent  bg-clip-text;
   }
   .custom-bg {
-    background-image: url();
+    /* Add a background image URL here if needed */
   }
 }
 html {
   scroll-behavior: smooth;
+}
+
+/* GPU-efficient rotating border — runs on compositor thread */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+  will-change: transform;
 }
 
 @theme inline {

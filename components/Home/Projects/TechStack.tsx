@@ -22,16 +22,17 @@ export default function TechStack({ project }: ProjectProp) {
       {project.techStack.map((tech, index) => (
         <div
           key={index}
-          className={`w-7 border h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-full bg-[#0b0f20] flex items-center justify-center ${
-            index !== 0 ? "-ml-2.5" : ""
+          className={`group/tech relative w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-base-content/5 border border-base-content/8 flex items-center justify-center hover:bg-base-content/10 hover:border-base-content/15 hover:scale-110 hover:z-10 transition-all duration-300 ${
+            index !== 0 ? "-ml-1.5" : ""
           }`}
+          title={tech.alt}
         >
           <Image
             src={tech.src}
             alt={tech.alt}
-            width={24}
-            height={24}
-            className="object-contain p-0.5"
+            width={18}
+            height={18}
+            className="object-contain opacity-70 group-hover/tech:opacity-100 transition-opacity duration-300"
           />
         </div>
       ))}

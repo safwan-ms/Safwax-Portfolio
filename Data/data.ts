@@ -92,6 +92,21 @@ export const servicesData = [
 export const projectData = [
   {
     id: 1,
+    image: "/images/p5.webp",
+    url: "https://mern-stack-safwaxstore.onrender.com",
+    codeUrl: "https://github.com/safwan-ms/MERN-Stack-SafwaxStore",
+    title: "MERN Stack Ecommerce Backend",
+    techStack: [
+      { src: "/images/mongo.svg", alt: "MongoDB" },
+      { src: "/images/express-js.png", alt: "Express" },
+      { src: "/images/react.svg", alt: "React" },
+      { src: "/images/node.svg", alt: "Node.js" },
+      { src: "/images/redux-icon.svg", alt: "Redux" },
+      { src: "/images/tailwind.svg", alt: "Tailwind" },
+    ],
+  },
+  {
+    id: 2,
     image: "/images/p1.png",
     url: "https://socketbuzz-chat-app.onrender.com/",
     codeUrl: "https://github.com/safwan-ms/MERN-Real-Time-Chat-App",
@@ -106,7 +121,7 @@ export const projectData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     image: "/images/p2.png",
     url: "https://mern-stack-safwaxstore.onrender.com",
     codeUrl: "https://github.com/safwan-ms/MERN-Stack-SafwaxStore",
@@ -131,30 +146,17 @@ export const projectData = [
       { src: "/images/tailwind.svg", alt: "Tailwind" },
     ],
   },
-
   {
     id: 4,
     image: "/images/p4.png",
-    url: "https://sky-cast-weather-app-react-js.vercel.app",
-    codeUrl: "https://github.com/safwan-ms/SkyCast-Weather-App-ReactJS",
-    title: "SkyCast weather App",
+    url: "https://easy-notes-react-gold.vercel.app",
+    codeUrl: "https://github.com/safwan-ms/EasyNotes-React",
+    title: "Easy Notes",
     techStack: [
       { src: "/images/react.svg", alt: "React" },
-      { src: "/images/ts.svg", alt: "TypeScript" },
+      { src: "/images/zustand.svg", alt: "Zustand" },
       { src: "/images/tailwind.svg", alt: "Tailwind" },
-      { src: "/images/daisyUI.png", alt: "DaisyUI" },
-    ],
-  },
-  {
-    id: 5,
-    image: "/images/p5.png",
-    url: "https://todo-list-phi-plum-35.vercel.app",
-    codeUrl: "https://github.com/safwan-ms/Todo-List-Typescript",
-    title: "Todo List App",
-    techStack: [
-      { src: "/images/react.svg", alt: "React" },
       { src: "/images/ts.svg", alt: "TypeScript" },
-      { src: "/images/tailwind.svg", alt: "Tailwind" },
     ],
   },
 ];
@@ -170,6 +172,9 @@ export const skillsData = {
     { id: 7, title: "HTML", image: "/images/html.svg" },
     { id: 8, title: "Tailwind", image: "/images/tailwind.svg" },
     { id: 9, title: "Motion Dev", image: "/images/motion-dev-icon.png" },
+    { id: 10, title: "Zustand", image: "images/zustand.svg" },
+    { id: 11, title: "Storybook", image: "images/storybook.svg" },
+    { id: 12, title: "Vitest", image: "images/vitest.svg" },
   ],
   backend: [
     { id: 1, title: "NodeJS", image: "/images/node.svg" },
@@ -178,6 +183,8 @@ export const skillsData = {
     { id: 4, title: "MySQL", image: "/images/mysql-icon.svg" },
     { id: 5, title: "Python", image: "/images/python.svg" },
     { id: 6, title: "Socket IO", image: "images/socket-io-icon.svg" },
+    { id: 7, title: "NestJS", image: "images/nestjs.svg" },
+    { id: 8, title: "Prisma", image: "images/prisma.svg" },
   ],
   othersTools: [
     { id: 1, title: "VS Code", image: "images/visual-studio-code-icon.svg" },

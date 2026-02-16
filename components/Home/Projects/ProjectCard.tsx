@@ -2,10 +2,8 @@
 import * as motion from "motion/react-client";
 import Link from "next/link";
 import Image from "next/image";
-import { FaCode } from "react-icons/fa";
-import { FaEye } from "react-icons/fa";
+import { FaCode, FaExternalLinkAlt } from "react-icons/fa";
 import TechStack from "./TechStack";
-import Tilt from "react-parallax-tilt";
 
 interface Project {
   id: number;
@@ -23,47 +21,93 @@ interface ProjectProp {
   index: number;
 }
 
-const ProjectCard = ({ project, index }: ProjectProp) => {
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
+};
+
+const ProjectCard = ({ project }: ProjectProp) => {
   return (
-    <motion.div
-      initial={{ scale: 0, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 1, delay: index * 0.1 }}
-      viewport={{ once: true }}
-    >
-      <Tilt key={project.id}>
-        <div className="bg-gradient-to-br from-info-content to-neutral p-4 rounded-lg">
+    <motion.div variants={itemVariants}>
+      <div className="group relative rounded-2xl bg-base-content/[0.02] border border-base-content/5 overflow-hidden hover:border-base-content/10 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)] transition-all duration-500">
+        {/* ── Image Section ── */}
+        <div className="relative overflow-hidden">
           <Link href={project.url} target="_blank">
-            <Image
-              src={project.image}
-              alt="project"
-              width={400}
-              height={200}
-              className="object-cover object-top h-[300px] lg:h-[400px] rounded-md"
-            />
-          </Link>
-          <p className="font-bold text-white mt-3 mx-1">{project.title}</p>
-
-          <div className="flex justify-between  pt-4">
-            <div className="flex justify-start">
-              <TechStack project={project} />
+            <div className="relative h-[240px] md:h-[280px] overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={500}
+                height={300}
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
             </div>
-            <div className="flex">
-              <Link href={project.url} target="_blank">
-                <button className="btn mr-1.5  hover:btn-primary/50 p-0.5 px-1 py-0.5 btn-primary ">
-                  <FaEye size={15} />
-                </button>
-              </Link>
+          </Link>
 
-              <Link href={project.codeUrl} target="_blank">
-                <button className="btn p-0.5 px-1 btn-secondary hover:btn-secondary/50">
-                  <FaCode size={15} />
-                </button>
+          {/* Floating action buttons on image */}
+          <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+            <Link
+              href={project.url}
+              target="_blank"
+              className="flex items-center justify-center w-9 h-9 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+              title="Live Preview"
+            >
+              <FaExternalLinkAlt className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              href={project.codeUrl}
+              target="_blank"
+              className="flex items-center justify-center w-9 h-9 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+              title="Source Code"
+            >
+              <FaCode className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* ── Content Section ── */}
+        <div className="p-5">
+          {/* Title */}
+          <h3 className="text-base font-semibold text-base-content tracking-tight group-hover:text-[#f72585] transition-colors duration-300">
+            {project.title}
+          </h3>
+
+          {/* Divider */}
+          <div className="my-4 h-px bg-base-content/5" />
+
+          {/* Footer: Tech + Links */}
+          <div className="flex items-center justify-between">
+            {/* Tech stack */}
+            <TechStack project={project} />
+
+            {/* Action links (always visible, smaller) */}
+            <div className="flex gap-2">
+              <Link
+                href={project.url}
+                target="_blank"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold text-base-content/60 bg-base-content/5 hover:bg-[#f72585]/10 hover:text-[#f72585] border border-base-content/5 hover:border-[#f72585]/20 transition-all duration-300"
+              >
+                <FaExternalLinkAlt className="w-2.5 h-2.5" />
+                Live
+              </Link>
+              <Link
+                href={project.codeUrl}
+                target="_blank"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold text-base-content/60 bg-base-content/5 hover:bg-[#7209b7]/10 hover:text-[#7209b7] border border-base-content/5 hover:border-[#7209b7]/20 transition-all duration-300"
+              >
+                <FaCode className="w-2.5 h-2.5" />
+                Code
               </Link>
             </div>
           </div>
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };

@@ -7,7 +7,7 @@ import Contact from "./Contact/Contact";
 
 const Home = () => {
   return (
-    <div className="overflow-hidden bg-gradient-to-b from-base-100 to-error-content">
+    <div className="overflow-x-hidden bg-linear-to-b from-base-100 to-error-content">
       <Hero />
       <About />
       <Projects />
