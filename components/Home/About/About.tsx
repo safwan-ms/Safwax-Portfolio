@@ -252,8 +252,7 @@ const About = () => {
         </div>
 
         
-          ))}
-        </motion.div>
+        
       </div>
     </section>
   );
